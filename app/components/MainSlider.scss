@@ -1,0 +1,27 @@
+@import './main.scss';
+
+.container {
+    @extend %flexbox;
+    max-width: 600px;
+    margin: 0 auto;
+    min-height: 0;
+    min-width: 0;
+    img {
+        display: flex;
+        max-width: 100%;
+        min-height: 0;
+        min-width: 0;
+    }
+}
+
+:global {
+    .slick-dots li button:before {
+        color: $light-gray;
+        font-size: 14px;
+    }
+    .slick-dots li.slick-active button:before {
+        color: $light-sea-blue;
+    }
+}
+
+ 
