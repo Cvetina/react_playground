@@ -20,11 +20,12 @@
         background-color: $white;
     }
     .slick-dots li button:before {
-        color: $black;
+        color: $main-text-color;
         font-size: 14px;
+        transition: all .3s ease;
     }
     .slick-dots li.slick-active button:before {
-        color: $light-sea-blue;
+        color: $main-link-color;
     }
 }
 

@@ -8,8 +8,8 @@
      @include flex-direction(row);
      @include  justify-content(center);
      width: 100%;
-     color: $white;
-     background-color: $dark-gray;
+     color: $main-text-color;
+     background-color: $main-nav-background;
      border-bottom: 1px solid rgba(255,255,255,.1);
   }
 
@@ -17,21 +17,21 @@
     @include flex(1);
     padding: 5px;
     text-align: center;
-    color:$white;
+    color: $main-text-color;
     font-weight: bold;
-    border-top: 3px solid $white;
+    border-top: 3px solid $main-text-color;
     margin: 2px;
     transition: all .3s ease;
     &:hover, &:focus {
-        border-top-color:$light-sea-blue;
-        color: $light-sea-blue;
+        border-top-color: $main-link-color;
+        color: $main-link-color;
         text-decoration: none;
     }
   }
 :global {
     .active {
-        border-top-color: $light-sea-blue;
-        color: $light-sea-blue;
+        border-top-color: $main-link-color;
+        color: $main-link-color;
     }
 }
   

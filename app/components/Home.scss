@@ -5,7 +5,7 @@
     @include flex-direction(row);
     @include  justify-content(center);
     h2 {
-        color : $light-sea-blue;
+        color : $h2-color;
     }
     p {
         text-align: justify;
