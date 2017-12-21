@@ -2,7 +2,7 @@
 
 .container {
     @extend %flexbox;
-    max-width: 600px;
+    max-width: 300px;
     margin: 0 auto;
     min-height: 0;
     min-width: 0;
@@ -15,8 +15,12 @@
 }
 
 :global {
+    .slick-dots {
+        bottom: 0;
+        background-color: $white;
+    }
     .slick-dots li button:before {
-        color: $light-gray;
+        color: $black;
         font-size: 14px;
     }
     .slick-dots li.slick-active button:before {

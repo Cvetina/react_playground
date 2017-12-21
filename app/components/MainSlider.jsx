@@ -15,7 +15,7 @@ class MainSlider extends React.Component {
 			dots: true,
 			swipeToSlide: true,
 			infinite: true,
-			speed: 500,
+			speed: 1500,
 			slidesToShow: 1,
 			slidesToScroll: 1
 	}
