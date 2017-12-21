@@ -1,0 +1,15 @@
+@import './main.scss';
+
+body {
+    background-color: $main-background-color;
+    color: $light-gray;
+    font-size: 16px;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.mainWrapper {
+    display: flex;
+    min-height: 80vh;
+    width: 100%;
+    padding: 20px;
+}

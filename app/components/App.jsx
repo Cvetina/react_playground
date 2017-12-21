@@ -1,13 +1,17 @@
 import React from 'react';
 import {render} from 'react-dom';
-import { BrowserRouter, Route, Link } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import Layout from './Layout.jsx';
+import MainNav from './MainNav.jsx';
 
 class App extends React.Component {
   render() {
     return (
       <BrowserRouter>
-        <Layout />
+        <div>
+          <MainNav />
+          <Layout />
+        </div>
       </BrowserRouter>
     );
   }

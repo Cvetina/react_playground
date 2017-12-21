@@ -1,17 +1,15 @@
 import React from 'react';
 import {render} from 'react-dom';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import { Nav, NavItem} from 'react-bootstrap';
-import style from './main.scss';
+import { NavLink } from 'react-router-dom';
+import style from './MainNav.scss';
 
 class MainNav extends React.Component {
   render() {
     return (
-        <Nav bsStyle="tabs" justified activeKey={1} onSelect={this.handleSelect}>
-          <NavItem eventKey={1} href="/home">NavItem 1 content</NavItem>
-          <NavItem eventKey={2} href="/about">NavItem 2 content</NavItem>
-          <NavItem eventKey={3}>NavItem 3 content</NavItem>
-        </Nav>
+      <div className={style.navContainer}>
+          <NavLink exact activeClassName='active' className={style.navItem} to={'/about'}>About</NavLink>
+          <NavLink exact activeClassName='active' className={style.navItem} to={'/home'}>Home</NavLink>
+      </div>
     );
   }
 }

@@ -1,0 +1,33 @@
+@import './main.scss';
+
+  .navContainer {
+     @extend %flexbox;
+     @include flex-direction(row);
+     @include  justify-content(center);
+     width: 100%;
+     color: $white;
+     background-color: $dark-gray;
+  }
+
+  .navItem {
+    @include flex(1);
+    padding: 5px;
+    text-align: center;
+    color: $light-sea-blue;
+    font-weight: bold;
+    border: 1px solid $light-sea-blue;
+    margin: 2px;
+    transition: all .3s ease;
+    &:hover, &:focus {
+        background-color: $light-sea-blue;
+        color: $white;
+        text-decoration: none;
+    }
+  }
+:global {
+    .active {
+        background-color:  $light-sea-blue;
+        color: $white;
+    }
+}
+  
