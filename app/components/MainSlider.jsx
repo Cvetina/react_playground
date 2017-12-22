@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import Slider from 'react-slick';
-import style from './MainSlider.scss';
  
 class MainSlider extends React.Component {
+	constructor(props) {
+		super(props);
+	}
 	componentWillReceiveProps(){
 		this.refs.slick.innerSlider.onWindowResized()
 	}
@@ -12,7 +14,6 @@ class MainSlider extends React.Component {
 			lazyLoad: true,
 			pauseOnHover: true,
 			arrows: true,
-			dots: true,
 			swipeToSlide: true,
 			infinite: true,
 			speed: 1500,
@@ -20,10 +21,8 @@ class MainSlider extends React.Component {
 			slidesToScroll: 1
 	}
 	return (
-		<Slider ref="slick" className={style.container} dotsClass={style.dots} {...settings} >
-			<div><img src='http://cvetina.net/images/slide2.png' /></div>
-			<div><img src='http://cvetina.net/images/slide14.jpg' /></div>
-			<div><img src='http://cvetina.net/images/slide7.jpg' /></div>
+		<Slider ref="slick" {...settings}>
+			{this.props.children}
 		</Slider>
 		);
 	}

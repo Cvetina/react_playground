@@ -1,25 +1,10 @@
 @import './main.scss';
 
 .container {
-    @extend %flexbox;
-    @include flex-direction(row);
-    @include  justify-content(center);
     h2 {
         color : $h2-color;
     }
     p {
         text-align: justify;
-    }
-}
-
-.sliderContainer, .textContainer {
-    @include flex(1);
-    padding: 10px;
-    margin: 5px;
-}
-
-@media (max-width: 600px) {
-    .container {
-        @include flex-direction(column);
     }
 }

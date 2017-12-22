@@ -9,6 +9,44 @@ body {
 
 .mainWrapper {
     @extend %flexbox;
+    @include flex-direction(column);
+    @include  justify-content(center);
     width: 100%;
-    padding: 30px 20px;
+    margin-top: 30px;
+    padding: 30px;
+}
+
+.sliderContainer {
+    margin: 1%;
+    width: 98%;
+}
+
+:global {
+    .slick-slide img {
+        width: 300px;
+        margin: 0 auto;
+    }
+
+    .slick-dots li button:before {
+        font-size: 12px;
+    }
+
+    .slick-slider {
+        padding-top: 10px;
+    }
+
+    .slick-next:before, .slick-prev:before {
+        font-size: 30px;
+    }
+
+    .slick-next {
+        right: 10px;
+        z-index: 11;
+    }
+
+    .slick-prev {
+        left: 0;
+        z-index: 11;
+    }
+
 }

@@ -7,10 +7,6 @@ class Home extends React.Component {
   render() {
     return (
       <div className={style.container}> 
-        <div className={style.sliderContainer}>
-          <MainSlider />
-        </div>
-        <div className={style.textContainer}>
           <h2>Home</h2>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam velit magna,
@@ -19,7 +15,6 @@ class Home extends React.Component {
             tellus euismod. Sed viverra ipsum semper, tincidunt magna vel, fermentum turpis. 
             Nam porta metus leo.
           </p>
-        </div>
       </div>
     );
   }
