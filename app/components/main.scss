@@ -21,6 +21,12 @@ html {
 
 %flexbox { @include flexbox; }
 
+%box-shadow {
+    -webkit-box-shadow: 0px 0px 40px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 40px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 40px 0px rgba(0,0,0,0.75);
+}
+
 @mixin flex-direction($direction) {
     -webkit-flex-direction: $direction;
        -moz-flex-direction: $direction;
