@@ -17,8 +17,40 @@ class MainSlider extends React.Component {
 			swipeToSlide: true,
 			infinite: true,
 			speed: 1500,
-			slidesToShow: 3,
-			slidesToScroll: 2
+			slidesToShow: 5,
+			slidesToScroll: 4,
+			responsive: [
+				{
+				  breakpoint: 1610,
+				  settings: {
+					slidesToShow: 4,
+					slidesToScroll: 3,
+					infinite: true,
+					dots: true
+				  }
+				},
+				{
+				  breakpoint: 1280,
+				  settings: {
+					slidesToShow: 3,
+					slidesToScroll: 2
+				  }
+				},
+				{
+				  breakpoint: 980,
+				  settings: {
+					slidesToShow: 2,
+					slidesToScroll: 1
+				  }
+				},
+				{
+				  breakpoint: 667,
+				  settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1
+				  }
+				}
+			  ]
 	}
 	return (
 		<Slider ref="slick" {...settings}>
