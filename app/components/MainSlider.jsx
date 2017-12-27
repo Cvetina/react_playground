@@ -11,29 +11,25 @@ class MainSlider extends React.Component {
 	render() {
 		const settings = { 
 			autoplay: true,
-			lazyLoad: true,
 			pauseOnHover: true,
 			arrows: true,
-			swipeToSlide: true,
 			infinite: true,
-			speed: 1500,
+			speed: 1000,
 			slidesToShow: 5,
-			slidesToScroll: 4,
+			slidesToScroll: 1,
 			responsive: [
 				{
 				  breakpoint: 1610,
 				  settings: {
 					slidesToShow: 4,
-					slidesToScroll: 3,
-					infinite: true,
-					dots: true
+					slidesToScroll: 1
 				  }
 				},
 				{
 				  breakpoint: 1280,
 				  settings: {
 					slidesToShow: 3,
-					slidesToScroll: 2
+					slidesToScroll: 1
 				  }
 				},
 				{
