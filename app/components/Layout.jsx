@@ -28,10 +28,10 @@ componentDidMount() {
     return (
       <div className={style.mainWrapper}>
         <div>
-          { isLoading && 
+          { isLoading && dataResponse.length === 0 &&
             <Spinner />
           }
-          { dataResponse && 
+          { dataResponse && dataResponse.length > 0 &&
             <MainSlider className={style.sliderContainer}>
               {sliderImages}
             </MainSlider>
