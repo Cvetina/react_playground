@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from 'react-dom';
 import MainSlider from './MainSlider.jsx';
-import style from './Home.scss';
+import style from './styles/Home.scss';
 
 class Home extends React.Component {
   render() {

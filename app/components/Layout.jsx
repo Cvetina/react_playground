@@ -4,9 +4,10 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import MainSlider from './MainSlider.jsx';
 import About from './About.jsx';
 import Home from './Home.jsx';
+import Login from './Login.jsx';
 import Start from './Start.jsx';
 import Spinner from './Spinner.jsx';
-import style from './Layout.scss';
+import style from './styles/Layout.scss';
 
 class Layout extends React.Component {
   constructor() {
@@ -27,6 +28,7 @@ componentDidMount() {
           <div key={item.login}><img src={item.avatar_url}/></div>);
     return (
       <div className={style.mainWrapper}>
+        <Route path="/login" component={Login}/>
         <div>
           { isLoading && dataResponse.length === 0 &&
             <Spinner />
