@@ -1,4 +1,5 @@
 @import './main.scss';
+@import './colors.scss';
 
   .navContainer {
      position: fixed;
@@ -9,29 +10,25 @@
      @include  justify-content(center);
      width: 100%;
      color: $main-text-color;
-     background-color: $main-nav-background;
-     border-bottom: 1px solid $light-sea-blue;
   }
 
   .navItem {
     @include flex(1);
+    @extend %box-shadow-main-menu;
+    border-top: 1px solid $main-nav-border-top;
     padding: 5px;
     text-align: center;
     color: $main-text-color;
     font-weight: bold;
-    border-top: 3px solid $main-text-color;
-    margin: 2px;
-    transition: all .3s ease;
     &:hover, &:focus {
-        border-top-color: $main-link-color;
-        color: $main-link-color;
         text-decoration: none;
+        color: $white;
+        background-color: $main-nav-active-state;
     }
   }
 :global {
     .active {
-        border-top-color: $main-link-color;
-        color: $main-link-color;
+        background-color: $main-nav-active-state;
     }
 }
   

@@ -1,12 +1,13 @@
 import React from 'react';
 import { render } from 'react-dom';
-import MainSlider from './MainSlider.jsx';
+import HomeSlider from './HomeSlider.jsx';
 import style from './styles/Home.scss';
 
 class Home extends React.Component {
   render() {
     return (
       <div className={style.container}> 
+          <HomeSlider />
           <h2>Home</h2>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam velit magna,

@@ -54,6 +54,7 @@ handleUserSubmit() {
             bsSize="large"
             type="submit"
             onSubmit={this.handleUserSubmit}
+            disabled={this.validateFPrm}
           >
             Login
           </Button>
