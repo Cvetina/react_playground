@@ -1,0 +1,25 @@
+@import './main.scss';
+@import './colors.scss';
+
+:global {
+    .slick-slide {
+        text-transform: uppercase;
+        font-size: 3vw;
+        font-weight: bold;
+        text-align: center;
+        transition: color .5s ease;
+        &:hover {
+            color: $white;
+            text-decoration: none;
+        }
+    }
+    .slick-slider {
+        background-image: url(/build/bg.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 10px;
+    }
+    a {
+        color: $main-link-color;
+    }
+} 

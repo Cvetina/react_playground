@@ -8,13 +8,15 @@ class HomeSlider extends React.Component {
     super();
     this.state = { 
                   dataResponse: [],
-                  isLoading: true,
+									isLoading: true,
+									error: null
                  };
 }
 componentDidMount() {
   fetch(`https://api.github.com/users`) 
   .then(data => data.json())
-  .then(data => this.setState({dataResponse : data}));
+	.then(data => this.setState({dataResponse : data}))
+	.catch(error => this.setState({ error, isLoading: false }));
   }
 	render() {
 	  const { dataResponse, isLoading } = this.state;

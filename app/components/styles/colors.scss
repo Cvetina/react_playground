@@ -9,8 +9,9 @@ $middle-sky-blue: rgb(18, 118, 158);
 $dark-sky-blue:#025377;
 $dark-green: #02686f;
 $middle-sky-blue: rgb(18, 118, 158);
+$red: #FF0000;
 
-
+$error: $red;
 $h2-color: $light-sea-blue;
 $main-background-color: $black;
 $main-text-color: $light-gray;
@@ -20,5 +21,5 @@ $secondary-header-background-color: $light-sky-blue;
 $header-color: $dark-sky-blue;
 
 $main-nav-background: $dark-gray;
-$main-nav-border-top: $light-sea-blue;
-$main-nav-active-state: #02686f;
+$main-nav-border-top: $light-gray;
+$main-nav-active-state: $dark-sky-blue;

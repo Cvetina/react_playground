@@ -20,6 +20,8 @@
     text-align: center;
     color: $main-text-color;
     font-weight: bold;
+    transition : background .5s ease;
+
     &:hover, &:focus {
         text-decoration: none;
         color: $white;
