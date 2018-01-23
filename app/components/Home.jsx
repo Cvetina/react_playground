@@ -10,7 +10,7 @@ class Home extends React.Component {
           <HomeSlider />
           <h2>Home</h2>
           <p>
-            Hi guys. This is my little reactjs project. I would like to enchance my skills in that direction. I`m consuming the github api. 
+             Hi guys. This is my little react JS project. I`m using the GitHub API for enhancing my skills as JS and font end developer.
           </p>
       </div>
     );

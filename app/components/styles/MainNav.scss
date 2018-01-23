@@ -8,18 +8,19 @@
      @include flex-direction(row);
      @include  justify-content(center);
      @extend %box-shadow-main-menu;
+     border-bottom: 1px solid $main-nav-border;
      width: 100%;
      color: $main-text-color;
   }
 
   .navItem {
     @include flex(1);
-    border-top: 1px solid $main-nav-border-top;
+    border-top: 1px solid $main-nav-border;
     padding: 5px;
     text-align: center;
     color: $main-text-color;
     font-weight: bold;
-    transition: background .5s ease-in;
+    transition: all .5s ease-in;
 
     &:hover, &:focus {
         text-decoration: none;
@@ -28,6 +29,11 @@
         color: $main-link-color;
     }
   }
+
+  .linkText {
+    padding: 5px;
+  }
+
 :global {
     .active {
         color: $main-link-color;
@@ -41,4 +47,10 @@
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0f0f0f', endColorstr='#0f0f0f', GradientType=1 );
     }
 }
+
+@media ($mobile) {
+    .linkText {
+        display: none;
+    }
+  }
   

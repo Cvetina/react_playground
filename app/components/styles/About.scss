@@ -1,0 +1,12 @@
+@import './main.scss';
+@import './colors.scss';
+
+.container {
+    padding: 20px;
+h2 {
+    color : $h2-color;
+}
+p {
+    text-align: justify;
+}
+}

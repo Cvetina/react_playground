@@ -47,7 +47,7 @@ class Search extends React.Component {
               type="submit"
               disabled={!isTouched}
             >
-             Search
+              <Glyphicon glyph="search" />
             </button>
          </form>
          { error &&
@@ -59,7 +59,7 @@ class Search extends React.Component {
           <h2 className={style.prgofileName}><Glyphicon glyph="user" /> {userProfile.login}</h2>
           <div className={style.item}>{userProfile.location !== null && `Location: ${userProfile.location}`}</div>
           <div>
-            <a className={style.link} href={userProfile.url} target="_blank">Github</a>
+            <a className={style.link} href={userProfile.html_url} target="_blank">Github</a>
             {userProfile.blog !== '' &&
             <a className={style.link} href={userProfile.blog} target="_blank">Portfolio</a>
             }

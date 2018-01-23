@@ -8,7 +8,7 @@ class Start extends React.Component {
   render() {
     return (
       <div className={style.svgContainer}> 
-        <MtSvgLines animate={true} duration={3000} fade={true} timing={"ease-in-out"}>
+        <MtSvgLines animate={true} duration={4000} fade={true} timing={"ease-in-out"}>
         <svg aria-labelledby="simpleicons-react-icon" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <circle fill="#09cac7" cx="12" cy="12" r="2.139"/>
           <path stroke="#09cac7" strokeWidth="0.3" fill="none" d="M6.008 16.255l-.472-.12C2.018 15.246 0 13.737 0 11.996s2.018-3.25 5.536-4.139l.472-.119.133.468a23.53 23.53 0 0 0 1.363 3.578l.101.213-.101.213a23.307 23.307 0 0 0-1.363 3.578l-.133.467zM5.317 8.95c-2.674.751-4.315 1.9-4.315 3.046 0 1.145 1.641 2.294 4.315 3.046a24.95 24.95 0 0 1 1.182-3.046A24.752 24.752 0 0 1 5.317 8.95zM17.992 16.255l-.133-.469a23.357 23.357 0 0 0-1.364-3.577l-.101-.213.101-.213a23.42 23.42 0 0 0 1.364-3.578l.133-.468.473.119c3.517.889 5.535 2.398 5.535 4.14s-2.018 3.25-5.535 4.139l-.473.12zm-.491-4.259c.48 1.039.877 2.06 1.182 3.046 2.675-.752 4.315-1.901 4.315-3.046 0-1.146-1.641-2.294-4.315-3.046a24.788 24.788 0 0 1-1.182 3.046z"/>

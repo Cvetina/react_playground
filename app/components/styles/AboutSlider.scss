@@ -18,6 +18,10 @@
             height: 300px;
             margin: 0 auto;
             @extend %box-shadow;
+
+            @media ($mobile) {
+                height: 200px;
+              }
         }
     }
     .slick-slider {
