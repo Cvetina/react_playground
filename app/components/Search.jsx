@@ -25,7 +25,7 @@ class Search extends React.Component {
   handleSubmit(event) {
     axios(`https://api.github.com/users/${this.state.value}`) 
     .then(response => response)
-    .then(data => this.setState({userProfile : data.data, profileRequest: true}))
+    .then(data => this.setState({userProfile : data.data, profileRequest: true, error: null}))
     .catch(error => this.setState({error: error.message}));
     event.preventDefault();
   }
