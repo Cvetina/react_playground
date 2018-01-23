@@ -1,5 +1,4 @@
 @import './main.scss';
-@import './colors.scss';
 
   .navContainer {
      position: fixed;
@@ -8,29 +7,38 @@
      @extend %flexbox;
      @include flex-direction(row);
      @include  justify-content(center);
+     @extend %box-shadow-main-menu;
      width: 100%;
      color: $main-text-color;
   }
 
   .navItem {
     @include flex(1);
-    @extend %box-shadow-main-menu;
     border-top: 1px solid $main-nav-border-top;
     padding: 5px;
     text-align: center;
     color: $main-text-color;
     font-weight: bold;
-    transition : background .5s ease;
+    transition: background .5s ease-in;
 
     &:hover, &:focus {
         text-decoration: none;
         color: $white;
-        background-color: $main-nav-active-state;
+        @extend %linear-gradient-background;
+        color: $main-link-color;
     }
   }
 :global {
     .active {
-        background-color: $main-nav-active-state;
+        color: $main-link-color;
+        background: rgba(15,15,15,1);
+        background: -moz-linear-gradient(left, rgba(15,15,15,1) 0%, rgba(2,84,119,0.72) 39%, rgba(2,84,119,0.8) 63%, rgba(15,15,15,1) 100%);
+        background: -webkit-gradient(left top, right top, color-stop(0%, rgba(15,15,15,1)), color-stop(39%, rgba(2,84,119,0.72)), color-stop(63%, rgba(2,84,119,0.8)), color-stop(100%, rgba(15,15,15,1)));
+        background: -webkit-linear-gradient(left, rgba(15,15,15,1) 0%, rgba(2,84,119,0.72) 39%, rgba(2,84,119,0.8) 63%, rgba(15,15,15,1) 100%);
+        background: -o-linear-gradient(left, rgba(15,15,15,1) 0%, rgba(2,84,119,0.72) 39%, rgba(2,84,119,0.8) 63%, rgba(15,15,15,1) 100%);
+        background: -ms-linear-gradient(left, rgba(15,15,15,1) 0%, rgba(2,84,119,0.72) 39%, rgba(2,84,119,0.8) 63%, rgba(15,15,15,1) 100%);
+        background: linear-gradient(to right, rgba(15,15,15,1) 0%, rgba(2,84,119,0.72) 39%, rgba(2,84,119,0.8) 63%, rgba(15,15,15,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0f0f0f', endColorstr='#0f0f0f', GradientType=1 );
     }
 }
   

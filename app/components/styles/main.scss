@@ -122,3 +122,7 @@ html {
     -ms-align-self: $align;
         align-self: $align;
 }
+
+$laptop: 'max-width: 1260px';
+$tablet: 'max-width: 960px';
+$mobile: 'max-width: 480px';

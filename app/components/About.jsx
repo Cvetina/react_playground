@@ -9,8 +9,7 @@ class About extends React.Component {
         <AboutSlider />
         <h2>About</h2>
         <p>
-          Phasellus commodo ipsum quis porta porta. Donec venenatis ex at interdum interdum. 
-          Nam interdum massa erat, sed consequat dui volutpat eget.
+            https://api.github.com/users
         </p>
         
       </div>

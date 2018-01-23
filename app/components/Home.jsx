@@ -10,11 +10,7 @@ class Home extends React.Component {
           <HomeSlider />
           <h2>Home</h2>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam velit magna,
-            dapibus eget ante vitae, tempus venenatis tellus. Curabitur et mattis nulla, 
-            at interdum elit. Suspendisse tincidunt elit a diam viverra, et dapibus 
-            tellus euismod. Sed viverra ipsum semper, tincidunt magna vel, fermentum turpis. 
-            Nam porta metus leo.
+            Hi guys. This is my little reactjs project. I would like to enchance my skills in that direction. I`m consuming the github api. 
           </p>
       </div>
     );

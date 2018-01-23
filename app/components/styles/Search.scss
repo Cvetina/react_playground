@@ -1,0 +1,95 @@
+@import './main.scss';
+
+.search {
+    max-width: 450px;
+    margin: 15px auto;
+    padding: 20px;
+    border-radius: 10px;
+    background-image: url(/build/bg.jpg);
+}
+
+.form {
+    display: flex;
+    @include flex-direction(row);   
+    @include justify-content(center);
+    text-align: center;
+}
+
+.input {
+    @include align-self(center);
+    border-radius: 5px;
+    padding: 5px;
+    margin-right: 10px;
+    transition: all .5s ease;
+    color: $dark-gray;
+    border: none;
+    width: 80%;
+
+    &:focus {
+        border-radius: 10px;
+        border-color: $light-sea-blue;  
+        outline: none;
+    }
+}
+
+.button {
+    @include align-self(center);
+    border-radius: 5px;
+    padding: 5px;
+    transition: all .5s ease;
+    color: $white;
+    background-color: $search-button-background;
+    border: none;
+
+    &:focus {
+        border-radius: 10px; 
+        outline: none;
+    }
+    &:hover {
+        background-color: $search-button-hover-background;
+    }
+}
+
+.prgofileContainer {
+    padding: 10px;
+    @extend %linear-gradient-background;
+    @extend %box-shadow;
+}
+
+.prgofileName {
+    font-weight: bold;
+    color: $h2-color;
+    text-transform: uppercase;
+}
+
+.prgofileBio {
+    padding: 10px;
+}
+
+.prgofileImage {
+    max-width: 200px;
+    margin: 10px;
+    border-radius: 10px;
+    @extend %box-shadow;
+}
+
+.link {
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+    transition: all .5 ease;
+    &:hover {
+        text-decoration: none;
+        color: $main-link-color;
+    }
+}
+
+.item {
+    padding: 10px;
+}
+
+.error {
+    padding: 5px;
+    color: $error;
+    text-align: center;
+}
