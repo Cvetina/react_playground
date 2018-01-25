@@ -11,7 +11,8 @@ class Search extends React.Component {
       userProfile: [],
       profileRequest: false,
       error: null,
-      isTouched: false
+      isTouched: false,
+      clearInput: false
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -25,30 +26,40 @@ class Search extends React.Component {
   handleSubmit(event) {
     axios(`https://api.github.com/users/${this.state.value}`) 
     .then(response => response)
-    .then(data => this.setState({userProfile : data.data, profileRequest: true, error: null}))
-    .catch(error => this.setState({error: error.message}));
+    .then(data => this.setState({userProfile : data.data, profileRequest: true, error: null, clearInput: true}))
+    .catch(error => this.setState({error: error.message, clearInput: true}));
     event.preventDefault();
   }
 
+  resetField(event) {
+    this.setState({value: null, clearInput: false});
+  } 
+
   render() {
-    const { profileRequest, userProfile, error, isTouched} = this.state;
+    const { profileRequest, userProfile, error, isTouched, clearInput} = this.state;
     return (
      <div>
         <div className={style.search}>
-         <form className={style.form} onSubmit={this.handleSubmit}>
+         <form className={style.form}>
              <input
                className={style.input}
                placeholder="Type User Name"
                value={this.state.userName}
                onChange={this.handleChange}
              />
-            <button
-              className={style.button}
-              type="submit"
-              disabled={!isTouched}
-            >
-              <Glyphicon glyph="search" />
-            </button>
+              <button
+                className={style.button}
+                type="submit"
+                disabled={!isTouched}
+                onClick={!clearInput ? this.handleSubmit : this.resetField}
+              >
+              {!clearInput &&
+                <Glyphicon className={style.icon} glyph="search" />
+              }
+              {clearInput &&
+                <Glyphicon className={style.icon} glyph="remove" />
+              }
+              </button>
          </form>
          { error &&
            <p className={style.error}> {error} </p>

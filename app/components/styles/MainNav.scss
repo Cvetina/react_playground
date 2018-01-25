@@ -7,7 +7,7 @@
      @extend %flexbox;
      @include flex-direction(row);
      @include  justify-content(center);
-     @extend %box-shadow-main-menu;
+     @extend %box-shadow-black-main-menu;
      border-bottom: 1px solid $main-nav-border;
      width: 100%;
      color: $main-text-color;

@@ -2,7 +2,7 @@
 
 .container {
     @extend %flexbox;
-    @extend %box-shadow-green;
+    @extend %box-shadow-black-green;
     max-width: 300px;
     margin: 0 auto;
     min-height: 0;

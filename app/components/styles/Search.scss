@@ -17,6 +17,7 @@
 
 .input {
     @include align-self(center);
+    @extend %box-shadow-black;
     border-radius: 5px 0 0 5px;
     padding: 5px;
     transition: all .5s ease;
@@ -33,26 +34,31 @@
 
 .button {
     @include align-self(center);
+    @extend %box-shadow-black;
     border-radius: 0 5px 5px 0;
     padding: 5px;
-    transition: all .5s ease;
+    transition: all .3s ease;
     color: $white;
     background-color: $search-button-background;
     border: none;
 
     &:focus {
-        border-radius: 0 10px 10px 0;
         outline: none;
     }
+
     &:hover {
         background-color: $search-button-hover-background;
+    }
+
+    &[disabled]{
+        cursor: not-allowed;
     }
 }
 
 .prgofileContainer {
     padding: 10px;
     @extend %linear-gradient-background;
-    @extend %box-shadow;
+    @extend %box-shadow-black;
 }
 
 .prgofileName {
@@ -69,7 +75,7 @@
     max-width: 200px;
     margin: 10px;
     border-radius: 10px;
-    @extend %box-shadow;
+    @extend %box-shadow-black;
 }
 
 .link {
@@ -91,4 +97,8 @@
     padding: 5px;
     color: $error;
     text-align: center;
+}
+
+.icon {
+    animation: fadeIn .5s;
 }
