@@ -84,7 +84,7 @@
     font-weight: bold;
     padding: 10px;
     transition: all .5 ease;
-    &:hover {
+    &:hover, &:focus {
         text-decoration: none;
         color: $main-link-color;
     }

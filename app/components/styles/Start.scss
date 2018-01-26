@@ -1,6 +1,10 @@
 @import './main.scss';
 
 .svgContainer {
-  width: 350px;
+  width: 400px;
   margin: 0 auto;
+
+  @media($mobile) {
+    width: 100%;
+  }
 }

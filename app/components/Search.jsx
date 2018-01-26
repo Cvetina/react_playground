@@ -33,7 +33,7 @@ class Search extends React.Component {
   }
 
   resetField(event) {
-    this.setState({value: null, clearInput: false});
+    this.setState(this.baseState);
   } 
 
   render() {
