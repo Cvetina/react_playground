@@ -56,9 +56,10 @@
 }
 
 .prgofileContainer {
-    padding: 10px;
     @extend %linear-gradient-background;
     @extend %box-shadow-black;
+    animation: fadeIn 1s;
+    padding: 10px;
 }
 
 .prgofileName {
@@ -102,3 +103,8 @@
 .icon {
     animation: fadeIn .5s;
 }
+
+.svgContainer {
+    width: 200px;
+    margin: 0 auto;
+  }
