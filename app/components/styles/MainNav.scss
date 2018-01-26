@@ -27,6 +27,7 @@
         color: $white;
         @extend %linear-gradient-background;
         color: $main-link-color;
+        animation: fadeIn .5s;
     }
   }
 
@@ -45,6 +46,10 @@
         background: -ms-linear-gradient(left, rgba(15,15,15,1) 0%, rgba(2,84,119,0.72) 39%, rgba(2,84,119,0.8) 63%, rgba(15,15,15,1) 100%);
         background: linear-gradient(to right, rgba(15,15,15,1) 0%, rgba(2,84,119,0.72) 39%, rgba(2,84,119,0.8) 63%, rgba(15,15,15,1) 100%);
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0f0f0f', endColorstr='#0f0f0f', GradientType=1 );
+
+        &:hover {
+            animation: none;
+        }
     }
 }
 
