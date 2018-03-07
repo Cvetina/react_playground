@@ -35,12 +35,12 @@
 .button {
     @include align-self(center);
     @extend %box-shadow-black;
-    border-radius: 0 5px 5px 0;
     padding: 5px;
     transition: all .3s ease;
     color: $white;
     background-color: $search-button-background;
     border: none;
+    border-radius: 0 5px 5px 0;
 
     &:focus {
         outline: none;
@@ -53,6 +53,11 @@
     &[disabled]{
         cursor: not-allowed;
     }
+}
+
+.buttonReset {
+    background: none;
+    border: none;
 }
 
 .prgofileContainer {

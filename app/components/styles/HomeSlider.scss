@@ -1,0 +1,15 @@
+@import './main.scss';
+@import './Slider.scss';
+
+.link {
+    position: relative;
+    .name {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        line-height: 40px;
+        background-color: rgba(0, 17, 25, .6);
+    }
+}
+

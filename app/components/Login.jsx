@@ -34,14 +34,14 @@ class Login extends React.Component {
   onLoginPressed (event){
     this.setState({showProgress: true});
     
-    const encodedAuth = base64.encode(this.state.username + ":" + this.state.password);
+    const encodedAuth = '0c62cf5e1a748c63d46862153f361df791b4a480'; //base64.encode(this.state.username + ":" + this.state.password);
 
-    fetch('https://api.github.com/user', {
+    fetch(`https://api.github.com/users/${this.state.username}`, {
       method: 'GET',
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json',
-        'Authorization' : 'Basic' + encodedAuth
+        'Authorization' : 'token ' + encodedAuth
       }
     })
     .then((response) => {

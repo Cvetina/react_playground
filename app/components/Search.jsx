@@ -40,6 +40,9 @@ class Search extends React.Component {
     const { profileRequest, userProfile, error, isTouched, clearInput} = this.state;
     return (
      <div>
+        <center>
+          Serch for GitHub users
+        </center>
         <div className={style.search}>
          <form className={style.form}>
              <input
@@ -52,14 +55,17 @@ class Search extends React.Component {
                 className={style.button}
                 type="submit"
                 disabled={!isTouched}
-                onClick={!clearInput ? this.handleSubmit : this.resetField}
+                onClick={this.handleSubmit}
               >
-              {!clearInput &&
-                <Glyphicon className={style.icon} glyph="search" />
-              }
-              {clearInput &&
-                <Glyphicon className={style.icon} glyph="remove" />
-              }
+              <Glyphicon className={style.icon} glyph="search" />
+              </button>
+              <button
+                className={style.buttonReset}
+                type="submit"
+                disabled={!isTouched}
+                onClick={ this.resetField}
+              >
+              <Glyphicon className={style.icon} glyph="remove" />
               </button>
          </form>
          { error &&
@@ -69,7 +75,12 @@ class Search extends React.Component {
        { profileRequest &&
         <center className={style.prgofileContainer}>
           <h2 className={style.prgofileName}><Glyphicon glyph="user" /> {userProfile.login}</h2>
-          <div className={style.item}>{userProfile.location !== null && `Location: ${userProfile.location}`}</div>
+          <div className={style.item}>
+            {userProfile.location !== null && `Location: ${userProfile.location}`}
+          </div>
+          <h4>
+            {userProfile.company} 
+          </h4>
           <div>
             <a className={style.link} href={userProfile.html_url} target="_blank">Github</a>
             {userProfile.blog !== '' &&

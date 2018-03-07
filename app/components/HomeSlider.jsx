@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import MainSlider from './MainSlider.jsx';
 import Spinner from './Spinner.jsx';
+import style from './styles/HomeSlider.scss';
 
 
 class HomeSlider extends React.Component {
@@ -21,7 +22,10 @@ componentDidMount() {
 	render() {
 	  const { dataResponse, isLoading } = this.state;
     const sliderImages = dataResponse.map((item) => 
-          <div key={item.login}><img src={item.avatar_url}/></div>);
+          <a className={style.link} href={item.html_url} target="_blank" key={item.login}>
+						<img src={item.avatar_url}/>
+						<span className={style.name}>{item.login}</span>
+					</a>);
 	return (
 			<div>
 						{ isLoading && dataResponse.length === 0 &&

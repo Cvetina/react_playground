@@ -1,7 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { Glyphicon } from "react-bootstrap"
-import Login from './Login.jsx';
+import { Glyphicon } from "react-bootstrap";
 import MtSvgLines from 'react-mt-svg-lines'; 
 import MainSlider from './MainSlider.jsx';
 import style from './styles/Start.scss';
@@ -19,7 +18,6 @@ class Start extends React.Component {
             <path stroke="#09cac7" strokeWidth="0.3" fill="none" strokeOpacity="0.9" d="M12 16.878c-.823 0-1.669-.036-2.516-.106l-.235-.02-.135-.193a30.388 30.388 0 0 1-1.35-2.122 30.354 30.354 0 0 1-1.166-2.228l-.1-.213.1-.213a30.3 30.3 0 0 1 1.166-2.228c.414-.716.869-1.43 1.35-2.122l.135-.193.235-.02a29.785 29.785 0 0 1 5.033 0l.234.02.134.193a30.006 30.006 0 0 1 2.517 4.35l.101.213-.101.213a29.6 29.6 0 0 1-2.517 4.35l-.134.193-.234.02c-.847.07-1.694.106-2.517.106zm-2.197-1.084c1.48.111 2.914.111 4.395 0a29.006 29.006 0 0 0 2.196-3.798 28.585 28.585 0 0 0-2.197-3.798 29.031 29.031 0 0 0-4.394 0 28.477 28.477 0 0 0-2.197 3.798 29.114 29.114 0 0 0 2.197 3.798z"/>
           </svg>
         </MtSvgLines>
-        <Login />
         <center>
           <small>
             <Glyphicon glyph="flash" /> React JS Application with GitHub API

@@ -1,7 +1,6 @@
 import React from 'react';
 import {render} from 'react-dom';
 import moment from 'moment';
-import AboutSlider from './AboutSlider.jsx';
 import style from './styles/About.scss';
 
 class About extends React.Component {
@@ -31,13 +30,26 @@ class About extends React.Component {
   render() {
     return (
       <div className={style.container}> 
-        <center className={style.time}>{this.getTime()}
+        <center>
+          <div className={style.time}>{this.getTime()}</div>
+          <h2>About</h2>
+          <p>
+          This is a sample micro project which stands for better understanding my
+          knowledge and skills as a developer. Sitting on the base of GitHub API and using 
+          React, Webpack, SCSS and Babel, this project aims to give you a simple overview.
+          Currently I am still developing the project and adding new features to it.
+          </p> 
+          <p>
+             Here I`ve used react slick for the slider, react dom router for 
+             routing and react bootstrap for the icons. For updating state in the project
+             I am using setState(). 
+          </p>  
+          <p>
+            As a developer I wish to stay current and up-to-date with the industry and new 
+            technologies. I have strong HTML and CSS skills, experience with Sass and jQuery,
+            experience with Angular, ReactJS, Redux and native JS.
+          </p>
         </center>
-        <h2>About</h2>
-        <p>
-           Users coming from https://api.github.com/users
-        </p>
-        <AboutSlider />
       </div>
     );
   }
