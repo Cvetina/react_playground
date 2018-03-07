@@ -58,6 +58,9 @@
 .buttonReset {
     background: none;
     border: none;
+    &:focus {
+        outline: none;
+    }
 }
 
 .prgofileContainer {
