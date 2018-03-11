@@ -7,7 +7,8 @@ class About extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      date: moment()
+      date: moment(),
+      eventDateValue: "18/03/2018 15:00:00"    
     };
   }
 
@@ -16,21 +17,31 @@ class About extends React.Component {
   }
 
   tick() {
-      this.setState({date: moment()});
+    this.setState({date: moment()});
   }
 
   getTime() {
-      return this.state.date.format('HH:mm:ss')
+    return this.state.date.format('HH:mm:ss')
+  }
+
+  getCountdown() {
+    const { date, eventDateValue } = this.state;
+    const duration = moment(eventDateValue,"DD/MM/YYYY HH:mm:ss")
+                          .diff(moment(date,"DD/MM/YYYY HH:mm:ss")
+                      );
+    const countdown = moment.duration(duration);           
+    return Math.floor(countdown.asDays()) + ' days ' + moment.utc(duration).format("HH:mm:ss");
   }
 
   componentDidMount() {
-      this.timerID = setInterval(() => this.tick(), 1000);
+        this.timerID = setInterval(() => this.tick(), 1000);
   }
 
   render() {
     return (
       <div className={style.container}> 
         <center>
+          <div>Countdown: {this.getCountdown()}</div>
           <div className={style.time}>{this.getTime()}</div>
           <h2>About</h2>
           <p>
