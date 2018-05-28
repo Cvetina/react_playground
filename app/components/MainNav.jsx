@@ -1,7 +1,9 @@
 import React from 'react';
 import {render} from 'react-dom';
 import { NavLink } from 'react-router-dom';
-import { Glyphicon } from "react-bootstrap";
+import Home from './shared/Home.jsx';
+import Fire from './shared/Fire.jsx';
+import Target from './shared/Target.jsx';
 import style from './styles/MainNav.scss';
 
 class MainNav extends React.Component {
@@ -9,15 +11,15 @@ class MainNav extends React.Component {
     return (
       <div className={style.navContainer}>
           <NavLink exact activeClassName='active' className={style.navItem} to={'/home'}>
-            <Glyphicon glyph="home" />
+            <Home />
             <span className={style.linkText}>Home</span> 
           </NavLink>
           <NavLink exact activeClassName='active' className={style.navItem} to={'/about'}>
-            <Glyphicon glyph="fire" />
+            <Fire />
             <span className={style.linkText}>About</span>
           </NavLink>
           <NavLink exact activeClassName='active' className={style.navItem} to={'/search'}>
-            <Glyphicon glyph="search" />
+            <Target />
             <span className={style.linkText}>Search</span> 
           </NavLink>
       </div>

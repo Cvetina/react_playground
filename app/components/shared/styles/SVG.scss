@@ -1,0 +1,27 @@
+
+@import './../../styles/colors.scss';
+
+@mixin icon {	
+  width: 20px;
+  height: 20px;
+  margin: 0 5px;
+  vertical-align: middle;
+
+  & path {
+    fill: $main-nav-icon-color;
+  }
+}
+
+.remove, .fire, .target, .home {
+  @include icon;
+}
+
+.user {
+  @include icon;
+  width: 30px;
+  height: 30px;
+}
+
+.like, .pencil, .folder {
+  @include icon;
+}

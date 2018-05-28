@@ -1,6 +1,11 @@
 import React from 'react';
 import axios from 'axios';
-import { Glyphicon } from "react-bootstrap";
+import Target from './shared/Target.jsx';
+import Remove from './shared/Remove.jsx';
+import User from './shared/User.jsx';
+import Folder from './shared/Folder.jsx';
+import Pencil from './shared/Pencil.jsx';
+import Like from './shared/Like.jsx';
 import MtSvgLines from 'react-mt-svg-lines'; 
 import style from './styles/Search.scss';
 
@@ -57,7 +62,7 @@ class Search extends React.Component {
                 disabled={!isTouched}
                 onClick={this.handleSubmit}
               >
-              <Glyphicon className={style.icon} glyph="search" />
+              <Target className={style.icon} />
               </button>
               <button
                 className={style.buttonReset}
@@ -65,7 +70,7 @@ class Search extends React.Component {
                 disabled={!isTouched}
                 onClick={ this.resetField}
               >
-              <Glyphicon className={style.icon} glyph="remove" />
+              <Remove className={style.icon} />
               </button>
          </form>
          { error &&
@@ -74,7 +79,7 @@ class Search extends React.Component {
        </div>
        { profileRequest &&
         <center className={style.prgofileContainer}>
-          <h2 className={style.prgofileName}><Glyphicon glyph="user" /> {userProfile.login}</h2>
+          <h2 className={style.prgofileName}><User /> {userProfile.login}</h2>
           <div className={style.item}>
             {userProfile.location !== null && `Location: ${userProfile.location}`}
           </div>
@@ -86,15 +91,15 @@ class Search extends React.Component {
             {userProfile.blog !== '' &&
             <a className={style.link} href={userProfile.blog} target="_blank">Portfolio</a>
             }
-            <span className={style.item}><Glyphicon glyph="thumbs-up" /> {userProfile.followers}</span>
+            <span className={style.item}><Like /> {userProfile.followers}</span>
             <a className={style.link} href={userProfile.repos_url} target="_blank">
-              <Glyphicon glyph="folder-open" /><span> Repos</span>
+              <Folder /><span> Repos</span>
             </a>
           </div>
           <div className={style.prgofileBio}>
             {userProfile.bio} 
             {userProfile.bio !== null &&
-              <Glyphicon glyph="pencil" />
+              <Pencil />
             }
           </div>
           <img className={style.prgofileImage} src={userProfile.avatar_url} />

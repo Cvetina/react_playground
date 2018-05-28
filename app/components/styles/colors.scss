@@ -1,7 +1,9 @@
 
 $white: #ffffff;
 $black: #0f0f0f;
+$transparent-black: rgba(0, 0, 0, .9);
 $dark-gray: #131212;
+$gray-blue: #082836;
 $light-gray: #b2c0cb;
 $light-sea-blue: #09cac7;
 $light-sky-blue: #6da3c7;
@@ -16,6 +18,8 @@ $error: $red;
 $h2-color: $light-sea-blue;
 $main-background-color: $black;
 $main-text-color: $light-gray;
+$main-nav-background-color: $transparent-black;
+$main-nav-icon-color: $light-sea-blue;
 $main-link-color: $light-sea-blue;
 $main-header-background-color: $light-sea-blue;
 $secondary-header-background-color: $light-sky-blue;

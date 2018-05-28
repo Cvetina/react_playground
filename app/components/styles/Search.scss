@@ -5,7 +5,7 @@
     margin: 15px auto;
     padding: 20px;
     border-radius: 10px;
-    background-image: url(/build/bg.jpg);
+    background-image: url(../images/bg.jpg);
 }
 
 .form {
@@ -19,11 +19,12 @@
     @include align-self(center);
     @extend %box-shadow-black;
     border-radius: 5px 0 0 5px;
-    padding: 5px;
+    padding: 6px;
     transition: all .5s ease;
     color: $dark-gray;
     border: none;
     width: 80%;
+    font-size: 16px;
 
     &:focus {
         border-radius: 10px 0 0 10px; 

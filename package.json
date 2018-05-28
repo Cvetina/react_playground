@@ -40,7 +40,8 @@
   },
   "scripts": {
     "build": "webpack",
-    "start": "webpack-dev-server"
+    "dev": "webpack-dev-server",
+    "prod": "webpack -p"
   },
   "repository": {
     "type": "git",
@@ -55,5 +56,5 @@
   "bugs": {
     "url": "https://github.com/Cvetina/react_playground/issues"
   },
-  "homepage": "https://github.com/Cvetina/react_playground#readme"
+  "homepage": "http://cvetarnica.cvetina.net/"
 }

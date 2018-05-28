@@ -1,22 +1,26 @@
-var path = require('path');
+const path = require('path');
+const webpack = require('webpack');
 
 const indexHTML = '/app/index.html';
-var HTMLWebpackPlugin =  require('html-webpack-plugin');
-var HTMLWebPluginConfig = new HTMLWebpackPlugin({
+const HTMLWebpackPlugin =  require('html-webpack-plugin');
+const HTMLWebPluginConfig = new HTMLWebpackPlugin({
 	template: __dirname + indexHTML,
 	filename: 'index.html',
 	inject: 'body',
 });
 
-var ExtractTextPlugin = require("extract-text-webpack-plugin");
-var ExtractTextPluginStyles = new ExtractTextPlugin({
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const ExtractTextPluginStyles = new ExtractTextPlugin({
     filename: "[name].[contenthash].css",
     disable: process.env.NODE_ENV === "development"
 });
 
+const DefineProd = new webpack.DefinePlugin({'process.env':{NODE_ENV:"'production'"}});
+
 module.exports = {
 	devtool: "source-map",
 	devServer: {
+		port: 8180,
 		historyApiFallback: true
 	},
 	entry: {
@@ -64,7 +68,8 @@ module.exports = {
 	},
 	output: {
 		filename: '[name].js',
-		path: __dirname + '/build'
+		path: __dirname + '/build',
+		publicPath: '/'
 	},
-	plugins: [HTMLWebPluginConfig, ExtractTextPluginStyles]
+	plugins: [HTMLWebPluginConfig, ExtractTextPluginStyles, DefineProd]
 };

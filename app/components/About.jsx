@@ -8,7 +8,7 @@ class About extends React.Component {
     super(props);
     this.state = {
       date: moment(),
-      eventDateValue: "18/03/2018 15:00:00"    
+      eventDateValue: "20/08/2018 23:40:00"    
     };
   }
 
@@ -41,7 +41,7 @@ class About extends React.Component {
     return (
       <div className={style.container}> 
         <center>
-          <div>Countdown: {this.getCountdown()}</div>
+          {/* <div>Countdown: {this.getCountdown()}</div> */}
           <div className={style.time}>{this.getTime()}</div>
           <h2>About</h2>
           <p>
